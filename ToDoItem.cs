@@ -7,12 +7,18 @@ using Newtonsoft.Json;
 
 namespace Canvas_Texting
 {
+    /// <summary>
+    /// Generate a ToDoItem, which pulls uses only the necessary information from the Canvas ToDo Request
+    /// </summary>
     public class ToDoItem
     {
         public string? context_name { get; set; }
         public Assignment? assignment { get; set; }
     }
 
+    /// <summary>
+    /// General Assignment class, used to get class id, name, and the due date
+    /// </summary>
     public class Assignment
     {
         public int id { get; set; }
@@ -20,6 +26,9 @@ namespace Canvas_Texting
         public AssignDate[]? all_dates { get; set; }
     }
 
+    /// <summary>
+    /// Date class, used to get specific date information for an assignment
+    /// </summary>
     public class AssignDate
     {
         public int id { get; set; }
